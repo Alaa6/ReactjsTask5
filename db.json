@@ -1,0 +1,40 @@
+{
+    "students":[
+        {
+            "id":1,
+            "name":"Mohamed Nasser",
+            "email":"m@gmail.com",
+            "city":"Ismailia"
+        },
+        {
+            "id":2,
+            "name":"Abnoub",
+            "email":"A@gmail.com",
+            "city":"Qena"
+        },
+        {
+            "id":3,
+            "name":"Marc",
+            "email":"M@gmail.com",
+            "city":"Cairo"
+        },
+        {
+            "id":4,
+            "name":"Amr",
+            "email":"A@gmail.com",
+            "city":"Alex"
+        },
+        {
+            "id":5,
+            "name":"Nourhan",
+            "email":"N@gmail.com",
+            "city":"Ismailia"
+        },
+        {
+            "id":6,
+            "name":"Heba",
+            "email":"A@gmail.com",
+            "city":"Sohag"
+        }
+    ]
+}
