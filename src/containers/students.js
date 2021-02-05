@@ -2,13 +2,12 @@ import {useState , useEffect} from 'react'
 import { connect } from 'react-redux';
 import Student from '../components/student'
 import {getStudents} from '../actions'
-
 import {bindActionCreators} from 'redux'
 
 
 
 
-const Students = ({ studentList ,history}) => {
+const Students = ({ studentList ,history , getStudents}) => {
 
     console.log(studentList , "studentList");
 
@@ -36,13 +35,11 @@ const Students = ({ studentList ,history}) => {
                     })}
                 </div>)
         return <p>
-            Enter a valid brand and search again :P 
+            No students here
         </p>
     }
 
-    return <p>
-        Enter a brand and search.
-    </p>
+   
 }
 
 const mapStateToProps = (state) => {

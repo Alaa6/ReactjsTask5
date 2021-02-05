@@ -1,16 +1,13 @@
 import { useEffect } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-// import { getCarDetails,clearCarDetails } from '../actions'
-const CarDetails = ({ getCarDetails,clearCarDetails, details, match }) => {
+import { getStudentDetails } from '../actions'
+const CarDetails = ({ getStudentDetails, details, match }) => {
     // const id = match.params.id
     // console.log(id)
     
     useEffect(() => {
-        console.log('as comp did mount')
-        // debugger;
-        // getCarDetails(id)
-
+        getStudentDetails()
         return ()=>{
             console.log('cleanup (unmount)')
             // clearCarDetails()
@@ -49,7 +46,7 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = (dispatch) => {
-    // return bindActionCreators({ getCarDetails ,clearCarDetails}, dispatch)
+    return bindActionCreators({ getStudentDetails }, dispatch)
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(CarDetails)

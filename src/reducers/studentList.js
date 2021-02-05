@@ -1,17 +1,35 @@
 
 export const students = (state = {}, action) => {
 
-    console.log(action , "action     jjjjj");
+
     
     switch (action.type) {
-        case "STUDENTS_LIST": {
+        case "STUDENT_LIST": {
 
             return action.payload
 
         }
        
         default:
-            return state  // return new state 
+            return state  
+    }
+
+}
+
+
+export const studentDetails = (state = {}, action) => {
+
+  
+    
+    switch (action.type) {
+        case "STUDENT_DETAILS": {
+
+            return action.payload
+
+        }
+       
+        default:
+            return state  
     }
 
 }
