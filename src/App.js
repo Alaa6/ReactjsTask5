@@ -15,13 +15,14 @@ const App = () => {
         <Provider store={createStoreWithMW(reducers)}>
             <BrowserRouter>
                 <div className="conatainer">
-                    <div className="row">
-                    <div className="col">
-                      <Header></Header>
+                <div className="row">
+                      <Header/>
 
                     </div>
+                    <div className="row">
+                    
 
-                        <div className="col">
+                        <div className="col mt-5">
                             <Switch>
                                 <Route exact path="/" component={Home} />
                                 <Route path="/student/:id" component={StudentDetails} />

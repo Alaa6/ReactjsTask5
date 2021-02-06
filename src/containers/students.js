@@ -1,29 +1,24 @@
-import {useState , useEffect} from 'react'
+import { useState, useEffect } from 'react'
 import { connect } from 'react-redux';
 import Student from '../components/student'
-import {getStudents} from '../actions'
-import {bindActionCreators} from 'redux'
+import { getStudents } from '../actions'
+import { bindActionCreators } from 'redux'
 
 
 
 
-const Students = ({ studentList ,history , getStudents}) => {
+const Students = ({ studentList, history, getStudents }) => {
 
-    console.log(studentList , "studentList");
+    console.log(studentList, "studentList");
 
     useEffect(() => {
-        console.log(getStudents().then((res)=> console.log(res , " reeeeeeeeeees")
-        ) , 'try getStudents()');
-        
-      getStudents()
-        return ()=>{
-         console.log(getStudents() , "getStudents");
-         
-           
-        }
-    },[])
 
-    
+        getStudents("")
+        return () => {
+        }
+    }, [])
+
+
 
     if (studentList) {
         if (studentList.length > 0)
@@ -31,7 +26,7 @@ const Students = ({ studentList ,history , getStudents}) => {
                 <div className="alert ">
                     {studentList.map((student) => {
 
-                        return <Student key={student.id} studentInfo={student} history={history}/>
+                        return <Student key={student.id} studentInfo={student} history={history} />
                     })}
                 </div>)
         return <p>
@@ -39,7 +34,7 @@ const Students = ({ studentList ,history , getStudents}) => {
         </p>
     }
 
-   
+
 }
 
 const mapStateToProps = (state) => {
@@ -48,7 +43,7 @@ const mapStateToProps = (state) => {
     }
 }
 const mapDispatchToProps = (dispatch) => {
-    return bindActionCreators({ getStudents}, dispatch)
+    return bindActionCreators({ getStudents }, dispatch) 
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Students)
