@@ -25,7 +25,7 @@ const Search = (   {  studentList }  ) => {
 
     const searchStudent = (keyword) => { 
         getStudents(keyword)
-        const result = words.filter(word => word.length > 6);
+      
 
     }
 
